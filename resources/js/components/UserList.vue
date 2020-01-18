@@ -5,6 +5,9 @@
                 <div class="card">
                     <div class="card-header">
                         Users
+                        <router-link :to="'/users/create'" 
+                            class="btn btn-primary btn-xs float-right">Creeate
+                        </router-link>
                         <div class="input-group input-group-sm">
                             <input class="form-control form-control-navbar" @keyup="searchit" v-model="search" type="search" placeholder="Search" aria-label="Search">
                             <div class="input-group-append">

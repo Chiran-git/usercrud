@@ -37,20 +37,13 @@ import '@fortawesome/fontawesome-free/js/all.js'
 
 Vue.component('index', require('./components/Index.vue').default);
 
-const routes = [
-	{
-        path: '/',
-        component: require('./components/UserList').default,
-    },
-	{
-        path: '/users/:id',
-        component: require('./components/EditComponent').default,
-    },
-];
+import { routes } from './routes';
 
 const router = new VueRouter({
-    routes
+    //mode: 'history'
+    routes: routes
 });
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
